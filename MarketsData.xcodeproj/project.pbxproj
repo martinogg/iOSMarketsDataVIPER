@@ -15,6 +15,15 @@
 		EE712B7220078BE6003CE405 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE712B7020078BE6003CE405 /* LaunchScreen.storyboard */; };
 		EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B7C20078BE6003CE405 /* MarketsDataTests.swift */; };
 		EE712B8820078BE6003CE405 /* MarketsDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B8720078BE6003CE405 /* MarketsDataUITests.swift */; };
+		EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */; };
+		EE712BB22007AC40003CE405 /* VIPERLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */; };
+		EE712BB32007AC40003CE405 /* VIPERAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */; };
+		EE712BB42007AC40003CE405 /* VIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA82007AC40003CE405 /* VIPERPresenter.swift */; };
+		EE712BB52007AC40003CE405 /* VIPERWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */; };
+		EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAC2007AC40003CE405 /* VIPERView.swift */; };
+		EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */; };
+		EE712BB82007AC40003CE405 /* VIPERItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB02007AC40003CE405 /* VIPERItem.swift */; };
+		EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB12007AC40003CE405 /* VIPERInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		EE712B8320078BE6003CE405 /* MarketsDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketsDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE712B8720078BE6003CE405 /* MarketsDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsDataUITests.swift; sourceTree = "<group>"; };
 		EE712B8920078BE6003CE405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListProtocolTests.swift; sourceTree = "<group>"; };
+		EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERLocalDataManager.swift; sourceTree = "<group>"; };
+		EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERAPIDataManager.swift; sourceTree = "<group>"; };
+		EE712BA82007AC40003CE405 /* VIPERPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERPresenter.swift; sourceTree = "<group>"; };
+		EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERWireFrame.swift; sourceTree = "<group>"; };
+		EE712BAC2007AC40003CE405 /* VIPERView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERView.swift; sourceTree = "<group>"; };
+		EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
+		EE712BB02007AC40003CE405 /* VIPERItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERItem.swift; sourceTree = "<group>"; };
+		EE712BB12007AC40003CE405 /* VIPERInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,7 @@
 		EE712B6320078BE6003CE405 /* MarketsData */ = {
 			isa = PBXGroup;
 			children = (
+				EE712BA12007AC40003CE405 /* ItemsList */,
 				EE712B6420078BE6003CE405 /* AppDelegate.swift */,
 				EE712B6620078BE6003CE405 /* ViewController.swift */,
 				EE712B6820078BE6003CE405 /* Main.storyboard */,
@@ -115,6 +134,7 @@
 			children = (
 				EE712B7C20078BE6003CE405 /* MarketsDataTests.swift */,
 				EE712B7E20078BE6003CE405 /* Info.plist */,
+				EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */,
 			);
 			path = MarketsDataTests;
 			sourceTree = "<group>";
@@ -126,6 +146,85 @@
 				EE712B8920078BE6003CE405 /* Info.plist */,
 			);
 			path = MarketsDataUITests;
+			sourceTree = "<group>";
+		};
+		EE712BA12007AC40003CE405 /* ItemsList */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BA22007AC40003CE405 /* DataManager */,
+				EE712BA72007AC40003CE405 /* Presenter */,
+				EE712BA92007AC40003CE405 /* WireFrame */,
+				EE712BAB2007AC40003CE405 /* View */,
+				EE712BAD2007AC40003CE405 /* Protocols */,
+				EE712BAF2007AC40003CE405 /* Interactor */,
+			);
+			path = ItemsList;
+			sourceTree = "<group>";
+		};
+		EE712BA22007AC40003CE405 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BA32007AC40003CE405 /* Local */,
+				EE712BA52007AC40003CE405 /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		EE712BA32007AC40003CE405 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		EE712BA52007AC40003CE405 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EE712BA72007AC40003CE405 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BA82007AC40003CE405 /* VIPERPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE712BA92007AC40003CE405 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		EE712BAB2007AC40003CE405 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BAC2007AC40003CE405 /* VIPERView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE712BAD2007AC40003CE405 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EE712BAF2007AC40003CE405 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EE712BB02007AC40003CE405 /* VIPERItem.swift */,
+				EE712BB12007AC40003CE405 /* VIPERInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +361,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE712BB32007AC40003CE405 /* VIPERAPIDataManager.swift in Sources */,
+				EE712BB42007AC40003CE405 /* VIPERPresenter.swift in Sources */,
+				EE712BB22007AC40003CE405 /* VIPERLocalDataManager.swift in Sources */,
+				EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */,
+				EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */,
+				EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */,
 				EE712B6720078BE6003CE405 /* ViewController.swift in Sources */,
 				EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */,
+				EE712BB82007AC40003CE405 /* VIPERItem.swift in Sources */,
 				EE712B6D20078BE6003CE405 /* MarketsData.xcdatamodeld in Sources */,
+				EE712BB52007AC40003CE405 /* VIPERWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */,
 				EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
