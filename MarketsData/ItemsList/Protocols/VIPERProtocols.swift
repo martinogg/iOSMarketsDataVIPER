@@ -69,3 +69,7 @@ protocol VIPERLocalDataManagerInputProtocol: class
     * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER
     */
 }
+
+protocol DataCellViewProtocol: class {
+    func configure(value: Int)
+}

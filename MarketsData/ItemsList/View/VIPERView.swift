@@ -10,3 +10,16 @@ class VIPERView: UITableViewController, VIPERViewProtocol
 {
     var presenter: VIPERPresenterProtocol?
 }
+
+extension VIPERView {
+    override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell") else {
+            fatalError()
+        }
+        return cell
+    }
+}

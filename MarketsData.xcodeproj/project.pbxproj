@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F452007E44F002D75F9 /* DataCellView.swift */; };
+		EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F472007E752002D75F9 /* DataCellViewTests.swift */; };
 		EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6420078BE6003CE405 /* AppDelegate.swift */; };
 		EE712B6720078BE6003CE405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6620078BE6003CE405 /* ViewController.swift */; };
 		EE712B6A20078BE6003CE405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE712B6820078BE6003CE405 /* Main.storyboard */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE318F452007E44F002D75F9 /* DataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellView.swift; sourceTree = "<group>"; };
+		EE318F472007E752002D75F9 /* DataCellViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellViewTests.swift; sourceTree = "<group>"; };
 		EE712B6120078BE5003CE405 /* MarketsData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketsData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE712B6420078BE6003CE405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE712B6620078BE6003CE405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				EE712B7C20078BE6003CE405 /* MarketsDataTests.swift */,
 				EE712B7E20078BE6003CE405 /* Info.plist */,
 				EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */,
+				EE318F472007E752002D75F9 /* DataCellViewTests.swift */,
 			);
 			path = MarketsDataTests;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				EE712BAC2007AC40003CE405 /* VIPERView.swift */,
+				EE318F452007E44F002D75F9 /* DataCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */,
 				EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */,
 				EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */,
+				EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */,
 				EE712B6720078BE6003CE405 /* ViewController.swift in Sources */,
 				EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */,
 				EE712BB82007AC40003CE405 /* VIPERItem.swift in Sources */,
@@ -381,6 +388,7 @@
 			files = (
 				EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */,
 				EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */,
+				EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
