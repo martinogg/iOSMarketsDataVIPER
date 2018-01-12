@@ -38,6 +38,8 @@ protocol VIPERInteractorOutputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> PRESENTER
     */
+    func dataRecv(data: [String])
+    func dataError(error: Error)
 }
 
 protocol VIPERInteractorInputProtocol: class
@@ -48,6 +50,7 @@ protocol VIPERInteractorInputProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
     */
+    func getOnlineTestData()
 }
 
 protocol VIPERDataManagerInputProtocol: class
@@ -62,6 +65,7 @@ protocol VIPERAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
+    func getOnlineTestData(onSuccess:((_ data: [String]) -> ()), onFail:((_ error: Error) -> ()))
 }
 
 protocol VIPERLocalDataManagerInputProtocol: class

@@ -7,5 +7,9 @@ import Foundation
 
 class VIPERAPIDataManager: VIPERAPIDataManagerInputProtocol
 {
+    func getOnlineTestData(onSuccess: (([String]) -> ()), onFail: ((Error) -> ())) {
+        onSuccess(["ok"]) // TODO: Alamofire Request
+    }
+    
     init() {}
 }

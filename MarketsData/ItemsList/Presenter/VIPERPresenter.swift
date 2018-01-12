@@ -5,7 +5,7 @@
 
 import Foundation
 
-class VIPERPresenter: VIPERPresenterProtocol, VIPERInteractorOutputProtocol
+class VIPERPresenter: VIPERPresenterProtocol
 {
     weak var view: VIPERViewProtocol?
     var interactor: VIPERInteractorInputProtocol?
@@ -14,6 +14,17 @@ class VIPERPresenter: VIPERPresenterProtocol, VIPERInteractorOutputProtocol
     init() {}
     
     func viewDidLoad() {
+        interactor?.getOnlineTestData()
         
+    }
+}
+
+extension VIPERPresenter: VIPERInteractorOutputProtocol {
+    func dataRecv(data: [String]) {
+        //TODO
+    }
+    
+    func dataError(error: Error) {
+        //TODO
     }
 }

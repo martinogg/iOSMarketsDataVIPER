@@ -12,4 +12,12 @@ class VIPERInteractor: VIPERInteractorInputProtocol
     var localDatamanager: VIPERLocalDataManagerInputProtocol?
     
     init() {}
+    
+    func getOnlineTestData() {
+        APIDataManager?.getOnlineTestData(onSuccess:{ (data) in
+            presenter?.dataRecv(data: data)
+        }, onFail:{ (error) in
+            presenter?.dataError(error: error)
+        })
+    }
 }
