@@ -30,6 +30,7 @@ protocol VIPERPresenterProtocol: class
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
+    func viewDidLoad()
 }
 
 protocol VIPERInteractorOutputProtocol: class

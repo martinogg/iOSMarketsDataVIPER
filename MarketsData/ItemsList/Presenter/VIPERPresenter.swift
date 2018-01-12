@@ -12,4 +12,8 @@ class VIPERPresenter: VIPERPresenterProtocol, VIPERInteractorOutputProtocol
     var wireFrame: VIPERWireFrameProtocol?
     
     init() {}
+    
+    func viewDidLoad() {
+        
+    }
 }

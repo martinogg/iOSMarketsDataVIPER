@@ -9,8 +9,13 @@ import UIKit
 class VIPERView: UITableViewController, VIPERViewProtocol
 {
     var presenter: VIPERPresenterProtocol?
+    
+    override func viewDidLoad() {
+        presenter?.viewDidLoad()
+    }
 }
 
+//MARK - UITableViewDataSource
 extension VIPERView {
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
