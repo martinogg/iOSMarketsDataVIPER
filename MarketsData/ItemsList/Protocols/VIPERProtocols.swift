@@ -68,7 +68,7 @@ protocol VIPERAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
-    func getOnlineTestData(onSuccess:((_ data: [String]) -> ()), onFail:((_ error: Error) -> ()))
+    func getOnlineTestData(onSuccess: @escaping (([String]) -> ()), onFail: @escaping ((Error) -> ()))
 }
 
 protocol VIPERLocalDataManagerInputProtocol: class

@@ -13,6 +13,7 @@ class VIPERView: UITableViewController, VIPERViewProtocol
     var alertController: UIAlertController?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         presenter?.viewDidLoad()
     }
     

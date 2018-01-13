@@ -23,6 +23,7 @@ class VIPERWireFrame: VIPERWireFrameProtocol
         let localDataManager: VIPERLocalDataManagerInputProtocol = VIPERLocalDataManager()
         let wireFrame: VIPERWireFrameProtocol = VIPERWireFrame()
         let alertController = UIAlertController.init()
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
         // Connecting
         view.presenter = presenter

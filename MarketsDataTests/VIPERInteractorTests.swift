@@ -13,33 +13,36 @@ class VIPERInteractorTests: XCTestCase {
     
     let interactorToTest = VIPERInteractor.init()
     
-    class MockError: Error {}
+    class MockPresenter: VIPERInteractorOutputProtocol {
+        var onDataRecvCallback: (([String]) -> ())?
+        var onErrorRecvCallback: ((Error) -> ())?
+        
+        func dataRecv(data: [String]) {
+            onDataRecvCallback?(data)
+        }
+        
+        func dataError(error: Error) {
+            onErrorRecvCallback?(error)
+        }
+    }
     
     class MockAPIDataManager: VIPERAPIDataManagerInputProtocol {
         
         let successReturn = ["Success", "Another", "Yes"]
-        let failReturn = MockError.init()
+        let failReturn: Error = NSError.init(domain: "Test", code: 0, userInfo: nil)
         var willReturnFail = false
         
-        func getOnlineTestData(onSuccess: (([String]) -> ()), onFail: ((Error) -> ())) {
+        func getOnlineTestData(onSuccess: @escaping (([String]) -> ()), onFail: @escaping ((Error) -> ())) {
             if (willReturnFail) {
-                onFail(failReturn)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    onFail(self.failReturn)
+                }
+                
             } else {
-                onSuccess(successReturn)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    onSuccess(self.successReturn)
+                }
             }
-        }
-    }
-    
-    class MockPresenter: VIPERInteractorOutputProtocol {
-        var dataReceived: [String]? = nil
-        var errorReceived: Error? = nil
-        
-        func dataRecv(data: [String]) {
-            dataReceived = data
-        }
-        
-        func dataError(error: Error) {
-            errorReceived = error
         }
     }
     
@@ -60,24 +63,26 @@ class VIPERInteractorTests: XCTestCase {
         interactorToTest.APIDataManager = mockAPIDataManager
         interactorToTest.presenter = mockPresenter
         
-        interactorToTest.getOnlineTestData()
+        let onDataRecvExpectation = expectation(description: "dataRecvExpectation")
         
-        guard let testDataReceived = mockPresenter.dataReceived else {
-            XCTFail()
-            fatalError()
+        mockPresenter.onDataRecvCallback = { testDataReceived in
+                XCTAssert(testDataReceived == mockAPIDataManager.successReturn)
+            onDataRecvExpectation.fulfill()
         }
         
-        XCTAssert(testDataReceived == mockAPIDataManager.successReturn)
+        interactorToTest.getOnlineTestData()
         
         mockAPIDataManager.willReturnFail = true
         
-        interactorToTest.getOnlineTestData()
-        guard let testErrorReceived = mockPresenter.errorReceived as? MockError else {
-            XCTFail()
-            fatalError()
+        let onErrorRecvExpectation = expectation(description: "errorRecvExpectation")
+        
+        mockPresenter.onErrorRecvCallback = { testErrorReceived in
+            onErrorRecvExpectation.fulfill()
         }
         
-        XCTAssert(mockAPIDataManager.failReturn === testErrorReceived)
+        interactorToTest.getOnlineTestData()
+        
+        waitForExpectations(timeout: 5)
     }
     
 }

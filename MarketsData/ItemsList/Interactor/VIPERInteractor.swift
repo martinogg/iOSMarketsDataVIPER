@@ -14,10 +14,10 @@ class VIPERInteractor: VIPERInteractorInputProtocol
     init() {}
     
     func getOnlineTestData() {
-        APIDataManager?.getOnlineTestData(onSuccess:{ (data) in
-            presenter?.dataRecv(data: data)
-        }, onFail:{ (error) in
-            presenter?.dataError(error: error)
+        APIDataManager?.getOnlineTestData(onSuccess:{ [unowned self] (data) in
+            self.presenter?.dataRecv(data: data)
+        }, onFail:{ [unowned self] (error) in
+            self.presenter?.dataError(error: error)
         })
     }
 }
