@@ -35,6 +35,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration" identifier="DataCell"/>
+                                <connections>
+                                    <outlet property="label1" destination="foc-Uh-Djp" id="5ez-bv-jHm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

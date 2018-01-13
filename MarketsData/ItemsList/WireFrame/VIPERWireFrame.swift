@@ -22,9 +22,11 @@ class VIPERWireFrame: VIPERWireFrameProtocol
         let APIDataManager: VIPERAPIDataManagerInputProtocol = VIPERAPIDataManager()
         let localDataManager: VIPERLocalDataManagerInputProtocol = VIPERLocalDataManager()
         let wireFrame: VIPERWireFrameProtocol = VIPERWireFrame()
+        let alertController = UIAlertController.init()
         
         // Connecting
         view.presenter = presenter
+        view.alertController = alertController
         presenter.view = view
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor

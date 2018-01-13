@@ -9,9 +9,12 @@ import UIKit
 protocol VIPERViewProtocol: class
 {
     var presenter: VIPERPresenterProtocol? { get set }
+    var alertController: UIAlertController? { get set }
     /**
     * Add here your methods for communication PRESENTER -> VIEW
     */
+    func showData(_ data: [String])
+    func showError(_ errorText: String)
 }
 
 protocol VIPERWireFrameProtocol: class
@@ -76,5 +79,5 @@ protocol VIPERLocalDataManagerInputProtocol: class
 }
 
 protocol DataCellViewProtocol: class {
-    func configure(value: Int)
+    func configure(value: String)
 }

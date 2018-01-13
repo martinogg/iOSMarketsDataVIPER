@@ -21,10 +21,10 @@ class VIPERPresenter: VIPERPresenterProtocol
 
 extension VIPERPresenter: VIPERInteractorOutputProtocol {
     func dataRecv(data: [String]) {
-        //TODO
+        view?.showData(data)
     }
     
     func dataError(error: Error) {
-        //TODO
+        view?.showError("An Error Occurred")
     }
 }

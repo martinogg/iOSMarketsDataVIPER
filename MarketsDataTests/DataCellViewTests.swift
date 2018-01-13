@@ -33,10 +33,13 @@ class DataCellViewTests: XCTestCase {
         let labelToTest = UILabel.init(frame: CGRect.zero)
         dataCellViewToTest.label1 = labelToTest
         
-        dataCellViewToTest.configure(value: 1)
-        XCTAssert(labelToTest.text == "Position 1")
-        dataCellViewToTest.configure(value: 2)
-        XCTAssert(labelToTest.text == "Position 2")
+        let testValue1 = "Test1"
+        let testValue2 = "Test222"
+        
+        dataCellViewToTest.configure(value: testValue1)
+        XCTAssert(labelToTest.text == testValue1)
+        dataCellViewToTest.configure(value: testValue2)
+        XCTAssert(labelToTest.text == testValue2)
     }
 }
 

@@ -6,9 +6,6 @@
 //  Copyright © 2018 martinogg. All rights reserved.
 //
 
-
-
-
 import XCTest
 @testable import MarketsData
 
