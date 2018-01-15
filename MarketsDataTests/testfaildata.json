@@ -1,0 +1,102 @@
+some[broken
+ {json data
+   "code": "AAXN",
+   "name": "Axon Enterprise, Inc. - Common Stock",
+   "value": 634
+ },
+ {
+   "code": "AVHI",
+   "name": "A V Homes, Inc. - Common Stock",
+   "value": 438
+ },
+ {
+   "code": "BCACR",
+   "name": "Bison Capital Acquisition Corp. - Rights",
+   "value": 296
+ },
+ {
+   "code": "BIIB",
+   "name": "Biogen Inc. - Common Stock",
+   "value": 333
+ },
+ {
+   "code": "CASC",
+   "name": "Cascadian Therapeutics, Inc. - Common Stock",
+   "value": 286
+ },
+ {
+   "code": "CHCO",
+   "name": "City Holding Company - Common Stock",
+   "value": 325
+ },
+ {
+   "code": "EMCG",
+   "name": "WisdomTree Emerging Markets Consumer Growth Fund",
+   "value": 704
+ },
+ {
+   "code": "EMXC",
+   "name": "iShares MSCI Emerging Markets ex China ETF",
+   "value": 83
+ },
+ {
+   "code": "ERII",
+   "name": "Energy Recovery, Inc. - Common Stock",
+   "value": 41
+ },
+ {
+   "code": "GLPI",
+   "name": "Gaming and Leisure Properties, Inc. - Common Stock",
+   "value": 728
+ },
+ {
+   "code": "GOODM",
+   "name": "Gladstone Commercial Corporation - Series D Cumulative Redeemable Preferred Stock",
+   "value": 838
+ },
+ {
+   "code": "KTWO",
+   "name": "K2M Group Holdings, Inc. - Common Stock",
+   "value": 453
+ },
+ {
+   "code": "MBFIO",
+   "name": "MB Financial Inc. - Depositary Shares, Each Representing a 1/40th Interest in a Share of 6.000% Noncumulative Perpetual Preferred Stock, Series C",
+   "value": 143
+ },
+ {
+   "code": "MBIO",
+   "name": "Mustang Bio, Inc. - Common Stock",
+   "value": 429
+ },
+ {
+   "code": "MIII",
+   "name": "M III Acquisition Corp. - Common Stock",
+   "value": 308
+ },
+ {
+   "code": "MSEX",
+   "name": "Middlesex Water Company - Common Stock",
+   "value": 299
+ },
+ {
+   "code": "OXLCO",
+   "name": "Oxford Lane Capital Corp. - Term Preferred Shares, 7.50% Series 2023",
+   "value": 616
+ },
+ {
+   "code": "PXUS",
+   "name": "Principal International Multi-Factor Index ETF",
+   "value": 287
+ },
+ {
+   "code": "PZRX",
+   "name": "PhaseRx, Inc. - Common Stock",
+   "value": 293
+ },
+ {
+   "code": "RNSC",
+   "name": "First Trust Small Cap US Equity Select ETF",
+   "value": 350
+ }
+]

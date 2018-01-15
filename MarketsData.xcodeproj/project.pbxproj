@@ -15,6 +15,9 @@
 		EE318F4A2008DF6B002D75F9 /* VIPERPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */; };
 		EE318F4C2008E02E002D75F9 /* VIPERViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */; };
 		EE318F4E2008F710002D75F9 /* VIPERInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */; };
+		EE318F50200D0014002D75F9 /* VIPERAPIDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */; };
+		EE318F53200D4357002D75F9 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F51200D4357002D75F9 /* testdata.json */; };
+		EE318F55200D5503002D75F9 /* testfaildata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F54200D5503002D75F9 /* testfaildata.json */; };
 		EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6420078BE6003CE405 /* AppDelegate.swift */; };
 		EE712B6720078BE6003CE405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6620078BE6003CE405 /* ViewController.swift */; };
 		EE712B6A20078BE6003CE405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE712B6820078BE6003CE405 /* Main.storyboard */; };
@@ -64,6 +67,9 @@
 		EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERPresenterTests.swift; sourceTree = "<group>"; };
 		EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERViewTests.swift; sourceTree = "<group>"; };
 		EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERInteractorTests.swift; sourceTree = "<group>"; };
+		EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERAPIDataManagerTests.swift; sourceTree = "<group>"; };
+		EE318F51200D4357002D75F9 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
+		EE318F54200D5503002D75F9 /* testfaildata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfaildata.json; sourceTree = "<group>"; };
 		EE712B6120078BE5003CE405 /* MarketsData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketsData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE712B6420078BE6003CE405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE712B6620078BE6003CE405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +188,8 @@
 		EE712B7B20078BE6003CE405 /* MarketsDataTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE318F51200D4357002D75F9 /* testdata.json */,
+				EE318F54200D5503002D75F9 /* testfaildata.json */,
 				EE712B7C20078BE6003CE405 /* MarketsDataTests.swift */,
 				EE712B7E20078BE6003CE405 /* Info.plist */,
 				EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */,
@@ -189,6 +197,7 @@
 				EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */,
 				EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */,
 				EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */,
+				EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */,
 			);
 			path = MarketsDataTests;
 			sourceTree = "<group>";
@@ -408,6 +417,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE318F53200D4357002D75F9 /* testdata.json in Resources */,
+				EE318F55200D5503002D75F9 /* testfaildata.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +610,7 @@
 				EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */,
 				EE318F4E2008F710002D75F9 /* VIPERInteractorTests.swift in Sources */,
 				EE318F4C2008E02E002D75F9 /* VIPERViewTests.swift in Sources */,
+				EE318F50200D0014002D75F9 /* VIPERAPIDataManagerTests.swift in Sources */,
 				EE318F4A2008DF6B002D75F9 /* VIPERPresenterTests.swift in Sources */,
 				EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */,
 				EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */,
