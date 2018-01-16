@@ -15,20 +15,28 @@ class VIPERView: UITableViewController, VIPERViewProtocol
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.viewDidLoad()
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
     }
     
     //MARK - VIPERViewProtocol
     func showData(_ data: [String]) {
         dataItems = data
+        self.tableView.refreshControl?.endRefreshing()
         self.tableView.reloadData()
     }
     
     func showError(_ errorText: String) {
+        self.tableView.refreshControl?.endRefreshing()
         if let alertController = alertController {
             alertController.title = "Error"
             alertController.message = errorText
             present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        presenter?.refreshData()
     }
 }
 

@@ -15,7 +15,10 @@ class VIPERPresenter: VIPERPresenterProtocol
     
     func viewDidLoad() {
         interactor?.getOnlineTestData()
-        
+    }
+    
+    func refreshData() {
+        interactor?.getOnlineTestData()
     }
 }
 

@@ -13,6 +13,19 @@ class VIPERPresenterTests: XCTestCase {
     
     let presenterToTest = VIPERPresenter.init()
     
+    class MockInteractor : VIPERInteractorInputProtocol {
+        var getOnlineTestDataCallback: (()->())? = nil
+        
+        var presenter: VIPERInteractorOutputProtocol?
+        var APIDataManager: VIPERAPIDataManagerInputProtocol?
+        var localDatamanager: VIPERLocalDataManagerInputProtocol?
+        
+        func getOnlineTestData() {
+            getOnlineTestDataCallback?()
+        }
+        
+    }
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,16 +36,36 @@ class VIPERPresenterTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testRefeshData() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expecation = expectation(description: "getOnlineTestDataCalled")
+        
+        let mockInteractor = MockInteractor.init()
+        mockInteractor.getOnlineTestDataCallback = {
+            expecation.fulfill()
+        }
+        
+        presenterToTest.interactor = mockInteractor
+        
+        presenterToTest.refreshData()
+        
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testViewDidLoad() {
+        let expecation = expectation(description: "getOnlineTestDataCalled")
+        
+        let mockInteractor = MockInteractor.init()
+        mockInteractor.getOnlineTestDataCallback = {
+            expecation.fulfill()
         }
+        
+        presenterToTest.interactor = mockInteractor
+        
+        presenterToTest.viewDidLoad()
+        
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
 }

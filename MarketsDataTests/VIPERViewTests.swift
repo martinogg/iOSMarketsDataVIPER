@@ -26,6 +26,7 @@ class VIPERViewTests: XCTestCase {
     let viewToTest = VIPERViewForTest.init(style: .plain)
     
     class MockVIPERPresenter: VIPERPresenterProtocol {
+        
         weak var view: VIPERViewProtocol?
         var interactor: VIPERInteractorInputProtocol?
         var wireFrame: VIPERWireFrameProtocol?
@@ -33,6 +34,9 @@ class VIPERViewTests: XCTestCase {
         
         func viewDidLoad() {
             viewDidLoadCalled = true
+        }
+        
+        func refreshData() {
         }
     }
     
