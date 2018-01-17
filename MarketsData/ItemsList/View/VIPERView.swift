@@ -9,7 +9,7 @@ import UIKit
 class VIPERView: UITableViewController, VIPERViewProtocol
 {
     var presenter: VIPERPresenterProtocol?
-    var dataItems: [String]?
+    var dataItems: [DataItem]?
     var alertController: UIAlertController?
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class VIPERView: UITableViewController, VIPERViewProtocol
     }
     
     //MARK - VIPERViewProtocol
-    func showData(_ data: [String]) {
+    func showData(_ data: [DataItem]) {
         dataItems = data
         self.tableView.refreshControl?.endRefreshing()
         self.tableView.reloadData()

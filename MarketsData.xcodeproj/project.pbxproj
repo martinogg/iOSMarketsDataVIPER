@@ -18,6 +18,7 @@
 		EE318F50200D0014002D75F9 /* VIPERAPIDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */; };
 		EE318F53200D4357002D75F9 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F51200D4357002D75F9 /* testdata.json */; };
 		EE318F55200D5503002D75F9 /* testfaildata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F54200D5503002D75F9 /* testfaildata.json */; };
+		EE318F59200FB634002D75F9 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F58200FB634002D75F9 /* DataItem.swift */; };
 		EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6420078BE6003CE405 /* AppDelegate.swift */; };
 		EE712B6720078BE6003CE405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6620078BE6003CE405 /* ViewController.swift */; };
 		EE712B6A20078BE6003CE405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE712B6820078BE6003CE405 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERAPIDataManagerTests.swift; sourceTree = "<group>"; };
 		EE318F51200D4357002D75F9 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		EE318F54200D5503002D75F9 /* testfaildata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfaildata.json; sourceTree = "<group>"; };
+		EE318F58200FB634002D75F9 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		EE712B6120078BE5003CE405 /* MarketsData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketsData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE712B6420078BE6003CE405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE712B6620078BE6003CE405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EE318F57200FB594002D75F9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F58200FB634002D75F9 /* DataItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		EE712B5820078BE5003CE405 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		EE712BA12007AC40003CE405 /* ItemsList */ = {
 			isa = PBXGroup;
 			children = (
+				EE318F57200FB594002D75F9 /* Entities */,
 				EE712BA22007AC40003CE405 /* DataManager */,
 				EE712BA72007AC40003CE405 /* Presenter */,
 				EE712BA92007AC40003CE405 /* WireFrame */,
@@ -521,11 +532,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MarketsData/Pods-MarketsData-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +607,7 @@
 				EE712BB42007AC40003CE405 /* VIPERPresenter.swift in Sources */,
 				EE712BB22007AC40003CE405 /* VIPERLocalDataManager.swift in Sources */,
 				EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */,
+				EE318F59200FB634002D75F9 /* DataItem.swift in Sources */,
 				EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */,
 				EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */,
 				EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */,

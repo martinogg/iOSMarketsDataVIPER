@@ -13,7 +13,7 @@ protocol VIPERViewProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> VIEW
     */
-    func showData(_ data: [String])
+    func showData(_ data: [DataItem])
     func showError(_ errorText: String)
 }
 
@@ -42,7 +42,7 @@ protocol VIPERInteractorOutputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> PRESENTER
     */
-    func dataRecv(data: [String])
+    func dataRecv(data: [DataItem])
     func dataError(error: Error)
 }
 
@@ -69,7 +69,7 @@ protocol VIPERAPIDataManagerInputProtocol: class
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
     */
-    func getOnlineTestData(onSuccess: @escaping (([String]) -> ()), onFail: @escaping ((Error) -> ()))
+    func getOnlineTestData(onSuccess: @escaping (([DataItem]) -> ()), onFail: @escaping ((Error) -> ()))
 }
 
 protocol VIPERLocalDataManagerInputProtocol: class
@@ -80,5 +80,5 @@ protocol VIPERLocalDataManagerInputProtocol: class
 }
 
 protocol DataCellViewProtocol: class {
-    func configure(value: String)
+    func configure(value: DataItem)
 }

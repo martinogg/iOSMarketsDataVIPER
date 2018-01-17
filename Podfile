@@ -8,6 +8,7 @@ target 'MarketsData' do
   # Pods for MarketsData
   pod 'Alamofire', '~> 4.5'
   pod 'PKHUD', '~> 5.0'
+  pod 'AlamofireObjectMapper', '~> 5.0'
 
   target 'MarketsDataTests' do
     inherit! :search_paths

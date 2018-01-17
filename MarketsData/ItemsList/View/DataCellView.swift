@@ -12,8 +12,8 @@ import UIKit
 class DataCellView: UITableViewCell, DataCellViewProtocol {
     @IBOutlet weak var label1: UILabel!
     
-    func configure(value: String) {
-        label1.text = value
+    func configure(value: DataItem) {
+        label1.text = value.code
     }
     
 }

@@ -5,32 +5,29 @@
 
 import Foundation
 import Alamofire
+import AlamofireObjectMapper
 
 class VIPERAPIDataManager: VIPERAPIDataManagerInputProtocol
 {
     var testURL: URL = URL(string: "https://martinogg.com/test/marketdata/stocks.json")!
     
-    func getOnlineTestData(onSuccess: @escaping (([String]) -> ()), onFail: @escaping ((Error) -> ())) {
+    func getOnlineTestData(onSuccess: @escaping (([DataItem]) -> ()), onFail: @escaping ((Error) -> ())) {
         
         Alamofire
             .request(testURL, method: .get)
             .validate()
-            .responseJSON(completionHandler: { (response) in
+            .responseArray(completionHandler: { (response: DataResponse<[DataItem]>) in
                 guard response.result.isSuccess else {
                     onFail(response.result.error ?? NSError(domain: "UnknownError", code: 1, userInfo: nil))
                     return
                 }
                 
-                guard let rows = response.result.value as? [[String: Any]] else {
+                guard let rows = response.result.value else {
                     onFail(NSError(domain: "Malformed data received", code: 1, userInfo: nil))
                     return
                 }
-                let entries = rows.flatMap({ (entryDict) -> String? in
-                    let ret = entryDict["code"] as? String ?? "ERROR-NOCODE"
-                    return ret
-                })
                 
-                onSuccess(entries)
+                onSuccess(rows)
             })
     }
     

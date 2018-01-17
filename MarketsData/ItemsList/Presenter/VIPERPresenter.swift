@@ -23,7 +23,7 @@ class VIPERPresenter: VIPERPresenterProtocol
 }
 
 extension VIPERPresenter: VIPERInteractorOutputProtocol {
-    func dataRecv(data: [String]) {
+    func dataRecv(data: [DataItem]) {
         view?.showData(data)
     }
     

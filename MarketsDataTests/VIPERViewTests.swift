@@ -75,7 +75,9 @@ class VIPERViewTests: XCTestCase {
     }
     
     func testShowData() {
-        let mockData = ["SomeText","Some MoreText","Even MoreText"]
+        let mockData = [DataItem.init(code: "aa11", name: "V1", value: 1),
+                             DataItem.init(code: "aa22", name: "V2", value: 2),
+                             DataItem.init(code: "aa33", name: "V3", value: 3)]
         let mockTableView = MockUITableView.init()
         
         viewToTest.tableView = mockTableView
@@ -92,7 +94,9 @@ class VIPERViewTests: XCTestCase {
         
         XCTAssert(viewToTest.tableView(UITableView.init(), numberOfRowsInSection: 0) == 3)
         
-        let moreMockData = ["Some MoreText","Even MoreText"]
+        let moreMockData = [DataItem.init(code: "aa3", name: "V3", value: 3),
+                        DataItem.init(code: "aa44", name: "V4", value: 4)]
+        
         viewToTest.showData(moreMockData)
         
         XCTAssert(viewToTest.tableView(UITableView.init(), numberOfRowsInSection: 0) == 2)
@@ -108,7 +112,7 @@ class VIPERViewTests: XCTestCase {
                 fatalError()
         }
         
-        XCTAssert(cellToTest0.label1.text == moreMockData[0])
+        XCTAssert(cellToTest0.label1.text == moreMockData[0].code)
         
         guard let cellToTest1 =
             viewToTest.tableView(mockTableView, cellForRowAt: IndexPath(row: 1, section: 0)) as? DataCellView else {
@@ -116,7 +120,7 @@ class VIPERViewTests: XCTestCase {
                 fatalError()
         }
         
-        XCTAssert(cellToTest1.label1.text == moreMockData[1])
+        XCTAssert(cellToTest1.label1.text == moreMockData[1].code)
     }
     
     func testShowError() {

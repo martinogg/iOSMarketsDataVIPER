@@ -9,15 +9,24 @@
 import XCTest
 @testable import MarketsData
 
+extension DataItem: Equatable {
+    static public func ==(lhs: DataItem, rhs: DataItem) -> Bool {
+        return (
+            (lhs.name == rhs.name) &&
+                (lhs.code == rhs.code) &&
+                (lhs.value == rhs.value) )
+    }
+}
+
 class VIPERInteractorTests: XCTestCase {
     
     let interactorToTest = VIPERInteractor.init()
     
     class MockPresenter: VIPERInteractorOutputProtocol {
-        var onDataRecvCallback: (([String]) -> ())?
+        var onDataRecvCallback: (([DataItem]) -> ())?
         var onErrorRecvCallback: ((Error) -> ())?
         
-        func dataRecv(data: [String]) {
+        func dataRecv(data: [DataItem]) {
             onDataRecvCallback?(data)
         }
         
@@ -28,11 +37,13 @@ class VIPERInteractorTests: XCTestCase {
     
     class MockAPIDataManager: VIPERAPIDataManagerInputProtocol {
         
-        let successReturn = ["Success", "Another", "Yes"]
+        let successReturn = [DataItem.init(code: "aa11", name: "V1", value: 1),
+                             DataItem.init(code: "aa22", name: "V2", value: 2),
+                             DataItem.init(code: "aa33", name: "V3", value: 3)]
         let failReturn: Error = NSError.init(domain: "Test", code: 0, userInfo: nil)
         var willReturnFail = false
         
-        func getOnlineTestData(onSuccess: @escaping (([String]) -> ()), onFail: @escaping ((Error) -> ())) {
+        func getOnlineTestData(onSuccess: @escaping (([DataItem]) -> ()), onFail: @escaping ((Error) -> ())) {
             if (willReturnFail) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     onFail(self.failReturn)
@@ -66,7 +77,7 @@ class VIPERInteractorTests: XCTestCase {
         let onDataRecvExpectation = expectation(description: "dataRecvExpectation")
         
         mockPresenter.onDataRecvCallback = { testDataReceived in
-                XCTAssert(testDataReceived == mockAPIDataManager.successReturn)
+            XCTAssert(testDataReceived == mockAPIDataManager.successReturn)
             onDataRecvExpectation.fulfill()
         }
         
