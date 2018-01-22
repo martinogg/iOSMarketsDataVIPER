@@ -19,6 +19,14 @@
 		EE318F53200D4357002D75F9 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F51200D4357002D75F9 /* testdata.json */; };
 		EE318F55200D5503002D75F9 /* testfaildata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F54200D5503002D75F9 /* testfaildata.json */; };
 		EE318F59200FB634002D75F9 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F58200FB634002D75F9 /* DataItem.swift */; };
+		EE318F6B201619EC002D75F9 /* SpecificItemProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F5C201619EB002D75F9 /* SpecificItemProtocols.swift */; };
+		EE318F6C201619EC002D75F9 /* SpecificItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F5E201619EB002D75F9 /* SpecificItemView.swift */; };
+		EE318F6D201619EC002D75F9 /* SpecificItemLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F61201619EB002D75F9 /* SpecificItemLocalDataManager.swift */; };
+		EE318F6E201619EC002D75F9 /* SpecificItemAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F63201619EB002D75F9 /* SpecificItemAPIDataManager.swift */; };
+		EE318F6F201619EC002D75F9 /* SpecificItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F65201619EC002D75F9 /* SpecificItemPresenter.swift */; };
+		EE318F70201619EC002D75F9 /* SpecificItemWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F67201619EC002D75F9 /* SpecificItemWireFrame.swift */; };
+		EE318F71201619EC002D75F9 /* SpecificItemItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F69201619EC002D75F9 /* SpecificItemItem.swift */; };
+		EE318F72201619EC002D75F9 /* SpecificItemInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F6A201619EC002D75F9 /* SpecificItemInteractor.swift */; };
 		EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6420078BE6003CE405 /* AppDelegate.swift */; };
 		EE712B6720078BE6003CE405 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B6620078BE6003CE405 /* ViewController.swift */; };
 		EE712B6A20078BE6003CE405 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE712B6820078BE6003CE405 /* Main.storyboard */; };
@@ -72,6 +80,14 @@
 		EE318F51200D4357002D75F9 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		EE318F54200D5503002D75F9 /* testfaildata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfaildata.json; sourceTree = "<group>"; };
 		EE318F58200FB634002D75F9 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		EE318F5C201619EB002D75F9 /* SpecificItemProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemProtocols.swift; sourceTree = "<group>"; };
+		EE318F5E201619EB002D75F9 /* SpecificItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemView.swift; sourceTree = "<group>"; };
+		EE318F61201619EB002D75F9 /* SpecificItemLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemLocalDataManager.swift; sourceTree = "<group>"; };
+		EE318F63201619EB002D75F9 /* SpecificItemAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemAPIDataManager.swift; sourceTree = "<group>"; };
+		EE318F65201619EC002D75F9 /* SpecificItemPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemPresenter.swift; sourceTree = "<group>"; };
+		EE318F67201619EC002D75F9 /* SpecificItemWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemWireFrame.swift; sourceTree = "<group>"; };
+		EE318F69201619EC002D75F9 /* SpecificItemItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemItem.swift; sourceTree = "<group>"; };
+		EE318F6A201619EC002D75F9 /* SpecificItemInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificItemInteractor.swift; sourceTree = "<group>"; };
 		EE712B6120078BE5003CE405 /* MarketsData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketsData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE712B6420078BE6003CE405 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE712B6620078BE6003CE405 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,8 +177,80 @@
 		EE318F5A20160D4A002D75F9 /* SpecificItem */ = {
 			isa = PBXGroup;
 			children = (
+				EE318F5F201619EB002D75F9 /* DataManager */,
+				EE318F68201619EC002D75F9 /* Interactor */,
+				EE318F64201619EC002D75F9 /* Presenter */,
+				EE318F5B201619EB002D75F9 /* Protocols */,
+				EE318F5D201619EB002D75F9 /* View */,
+				EE318F66201619EC002D75F9 /* WireFrame */,
 			);
 			path = SpecificItem;
+			sourceTree = "<group>";
+		};
+		EE318F5B201619EB002D75F9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F5C201619EB002D75F9 /* SpecificItemProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EE318F5D201619EB002D75F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F5E201619EB002D75F9 /* SpecificItemView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE318F5F201619EB002D75F9 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F60201619EB002D75F9 /* Local */,
+				EE318F62201619EB002D75F9 /* API */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		EE318F60201619EB002D75F9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F61201619EB002D75F9 /* SpecificItemLocalDataManager.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		EE318F62201619EB002D75F9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F63201619EB002D75F9 /* SpecificItemAPIDataManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		EE318F64201619EC002D75F9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F65201619EC002D75F9 /* SpecificItemPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE318F66201619EC002D75F9 /* WireFrame */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F67201619EC002D75F9 /* SpecificItemWireFrame.swift */,
+			);
+			path = WireFrame;
+			sourceTree = "<group>";
+		};
+		EE318F68201619EC002D75F9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				EE318F69201619EC002D75F9 /* SpecificItemItem.swift */,
+				EE318F6A201619EC002D75F9 /* SpecificItemInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		EE712B5820078BE5003CE405 = {
@@ -615,15 +703,23 @@
 				EE712BB42007AC40003CE405 /* ItemsListsPresenter.swift in Sources */,
 				EE712BB22007AC40003CE405 /* ItemsListsLocalDataManager.swift in Sources */,
 				EE712BB62007AC40003CE405 /* ItemsListsView.swift in Sources */,
+				EE318F6B201619EC002D75F9 /* SpecificItemProtocols.swift in Sources */,
+				EE318F72201619EC002D75F9 /* SpecificItemInteractor.swift in Sources */,
 				EE318F59200FB634002D75F9 /* DataItem.swift in Sources */,
 				EE712BB92007AC40003CE405 /* ItemsListsInteractor.swift in Sources */,
+				EE318F71201619EC002D75F9 /* SpecificItemItem.swift in Sources */,
+				EE318F6F201619EC002D75F9 /* SpecificItemPresenter.swift in Sources */,
 				EE712BB72007AC40003CE405 /* ItemsListsProtocols.swift in Sources */,
 				EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */,
+				EE318F6E201619EC002D75F9 /* SpecificItemAPIDataManager.swift in Sources */,
 				EE712B6720078BE6003CE405 /* ViewController.swift in Sources */,
 				EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */,
 				EE712BB82007AC40003CE405 /* ItemsListsItem.swift in Sources */,
+				EE318F6D201619EC002D75F9 /* SpecificItemLocalDataManager.swift in Sources */,
+				EE318F70201619EC002D75F9 /* SpecificItemWireFrame.swift in Sources */,
 				EE712B6D20078BE6003CE405 /* MarketsData.xcdatamodeld in Sources */,
 				EE712BB52007AC40003CE405 /* ItemsListsWireFrame.swift in Sources */,
+				EE318F6C201619EC002D75F9 /* SpecificItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
