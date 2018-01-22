@@ -3,12 +3,9 @@
 //  Copyright © 2018 martinogg. All rights reserved.
 //
 
-
 import Foundation
 
-struct VIPERItem
+class ItemsListsLocalDataManager: ItemsListsLocalDataManagerInputProtocol
 {
-    /**
-    *  Attributes here
-    */
+    init() {}
 }

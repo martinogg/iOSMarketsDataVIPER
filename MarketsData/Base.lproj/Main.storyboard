@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View-->
+        <!--Items Lists View-->
         <scene sceneID="keC-T3-a9C">
             <objects>
-                <tableViewController id="vl3-AC-1m9" customClass="VIPERView" customModule="MarketsData" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vl3-AC-1m9" customClass="ItemsListsView" customModule="MarketsData" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LFd-re-V42">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
         <!--Navigation Controller-->
         <scene sceneID="WRD-Dh-omv">
             <objects>
-                <navigationController storyboardIdentifier="VIPERNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mA0-jC-Oow" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ItemsListsNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mA0-jC-Oow" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kJ8-aB-Pda">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

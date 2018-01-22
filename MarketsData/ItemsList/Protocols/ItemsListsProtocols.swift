@@ -6,9 +6,9 @@
 import Foundation
 import UIKit
 
-protocol VIPERViewProtocol: class
+protocol ItemsListsViewProtocol: class
 {
-    var presenter: VIPERPresenterProtocol? { get set }
+    var presenter: ItemsListsPresenterProtocol? { get set }
     var alertController: UIAlertController? { get set }
     /**
     * Add here your methods for communication PRESENTER -> VIEW
@@ -17,19 +17,19 @@ protocol VIPERViewProtocol: class
     func showError(_ errorText: String)
 }
 
-protocol VIPERWireFrameProtocol: class
+protocol ItemsListsWireFrameProtocol: class
 {
-    static func createVIPERModule() -> UIViewController
+    static func createItemsListsModule() -> UIViewController
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
 }
 
-protocol VIPERPresenterProtocol: class
+protocol ItemsListsPresenterProtocol: class
 {
-    var view: VIPERViewProtocol? { get set }
-    var interactor: VIPERInteractorInputProtocol? { get set }
-    var wireFrame: VIPERWireFrameProtocol? { get set }
+    var view: ItemsListsViewProtocol? { get set }
+    var interactor: ItemsListsInteractorInputProtocol? { get set }
+    var wireFrame: ItemsListsWireFrameProtocol? { get set }
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
@@ -37,7 +37,7 @@ protocol VIPERPresenterProtocol: class
     func refreshData()
 }
 
-protocol VIPERInteractorOutputProtocol: class
+protocol ItemsListsInteractorOutputProtocol: class
 {
     /**
     * Add here your methods for communication INTERACTOR -> PRESENTER
@@ -46,25 +46,25 @@ protocol VIPERInteractorOutputProtocol: class
     func dataError(error: Error)
 }
 
-protocol VIPERInteractorInputProtocol: class
+protocol ItemsListsInteractorInputProtocol: class
 {
-    var presenter: VIPERInteractorOutputProtocol? { get set }
-    var APIDataManager: VIPERAPIDataManagerInputProtocol? { get set }
-    var localDatamanager: VIPERLocalDataManagerInputProtocol? { get set }
+    var presenter: ItemsListsInteractorOutputProtocol? { get set }
+    var APIDataManager: ItemsListsAPIDataManagerInputProtocol? { get set }
+    var localDatamanager: ItemsListsLocalDataManagerInputProtocol? { get set }
     /**
     * Add here your methods for communication PRESENTER -> INTERACTOR
     */
     func getOnlineTestData()
 }
 
-protocol VIPERDataManagerInputProtocol: class
+protocol ItemsListsDataManagerInputProtocol: class
 {
     /**
     * Add here your methods for communication INTERACTOR -> DATAMANAGER
     */
 }
 
-protocol VIPERAPIDataManagerInputProtocol: class
+protocol ItemsListsAPIDataManagerInputProtocol: class
 {
     /**
     * Add here your methods for communication INTERACTOR -> APIDATAMANAGER
@@ -72,7 +72,7 @@ protocol VIPERAPIDataManagerInputProtocol: class
     func getOnlineTestData(onSuccess: @escaping (([DataItem]) -> ()), onFail: @escaping ((Error) -> ()))
 }
 
-protocol VIPERLocalDataManagerInputProtocol: class
+protocol ItemsListsLocalDataManagerInputProtocol: class
 {
     /**
     * Add here your methods for communication INTERACTOR -> LOCALDATAMANAGER

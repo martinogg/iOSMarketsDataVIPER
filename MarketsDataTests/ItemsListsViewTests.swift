@@ -1,5 +1,5 @@
 //
-//  VIPERViewTests.swift
+//  ItemsListsViewTests.swift
 //  MarketsDataTests
 //
 //  Created by martin ogg on 12/01/2018.
@@ -10,9 +10,9 @@ import XCTest
 import UIKit
 @testable import MarketsData
 
-class VIPERViewTests: XCTestCase {
+class ItemsListsViewTests: XCTestCase {
     
-    class VIPERViewForTest: VIPERView {
+    class ItemsListsViewForTest: ItemsListsView {
         var presentFuncCalled = false
         var viewControllerPresented: UIViewController?
         
@@ -23,13 +23,13 @@ class VIPERViewTests: XCTestCase {
         }
     }
     
-    let viewToTest = VIPERViewForTest.init(style: .plain)
+    let viewToTest = ItemsListsViewForTest.init(style: .plain)
     
-    class MockVIPERPresenter: VIPERPresenterProtocol {
+    class MockItemsListsPresenter: ItemsListsPresenterProtocol {
         
-        weak var view: VIPERViewProtocol?
-        var interactor: VIPERInteractorInputProtocol?
-        var wireFrame: VIPERWireFrameProtocol?
+        weak var view: ItemsListsViewProtocol?
+        var interactor: ItemsListsInteractorInputProtocol?
+        var wireFrame: ItemsListsWireFrameProtocol?
         var viewDidLoadCalled = false
         
         func viewDidLoad() {
@@ -66,7 +66,7 @@ class VIPERViewTests: XCTestCase {
     }
     
     func testViewDidLoad() {
-        let mockPresenter = MockVIPERPresenter.init()
+        let mockPresenter = MockItemsListsPresenter.init()
         
         viewToTest.presenter = mockPresenter
         viewToTest.viewDidLoad()

@@ -7,7 +7,7 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-class VIPERAPIDataManager: VIPERAPIDataManagerInputProtocol
+class ItemsListsAPIDataManager: ItemsListsAPIDataManagerInputProtocol
 {
     var testURL: URL = URL(string: "https://martinogg.com/test/marketdata/stocks.json")!
     

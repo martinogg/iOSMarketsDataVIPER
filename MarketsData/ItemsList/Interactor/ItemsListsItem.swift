@@ -3,9 +3,12 @@
 //  Copyright © 2018 martinogg. All rights reserved.
 //
 
+
 import Foundation
 
-class VIPERLocalDataManager: VIPERLocalDataManagerInputProtocol
+struct ItemsListsItem
 {
-    init() {}
+    /**
+    *  Attributes here
+    */
 }

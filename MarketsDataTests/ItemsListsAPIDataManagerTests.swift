@@ -1,5 +1,5 @@
 //
-//  VIPERAPIDataManagerTests.swift
+//  ItemsListsAPIDataManagerTests.swift
 //  MarketsDataTests
 //
 //  Created by martin ogg on 15/01/2018.
@@ -10,9 +10,9 @@ import XCTest
 import Alamofire
 @testable import MarketsData
 
-class VIPERAPIDataManagerTests: XCTestCase {
+class ItemsListsAPIDataManagerTests: XCTestCase {
     
-    let dataManagerToTest = VIPERAPIDataManager.init()
+    let dataManagerToTest = ItemsListsAPIDataManager.init()
     
     override func setUp() {
         super.setUp()

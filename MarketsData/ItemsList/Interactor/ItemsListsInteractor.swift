@@ -5,11 +5,11 @@
 
 import Foundation
 
-class VIPERInteractor: VIPERInteractorInputProtocol
+class ItemsListsInteractor: ItemsListsInteractorInputProtocol
 {
-    weak var presenter: VIPERInteractorOutputProtocol?
-    var APIDataManager: VIPERAPIDataManagerInputProtocol?
-    var localDatamanager: VIPERLocalDataManagerInputProtocol?
+    weak var presenter: ItemsListsInteractorOutputProtocol?
+    var APIDataManager: ItemsListsAPIDataManagerInputProtocol?
+    var localDatamanager: ItemsListsLocalDataManagerInputProtocol?
     
     init() {}
     

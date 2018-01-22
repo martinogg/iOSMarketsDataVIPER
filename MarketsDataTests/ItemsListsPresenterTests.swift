@@ -1,5 +1,5 @@
 //
-//  VIPERPresenterTests.swift
+//  ItemsListsPresenterTests.swift
 //  MarketsDataTests
 //
 //  Created by martin ogg on 12/01/2018.
@@ -9,16 +9,16 @@
 import XCTest
 @testable import MarketsData
 
-class VIPERPresenterTests: XCTestCase {
+class ItemsListsPresenterTests: XCTestCase {
     
-    let presenterToTest = VIPERPresenter.init()
+    let presenterToTest = ItemsListsPresenter.init()
     
-    class MockInteractor : VIPERInteractorInputProtocol {
+    class MockInteractor : ItemsListsInteractorInputProtocol {
         var getOnlineTestDataCallback: (()->())? = nil
         
-        var presenter: VIPERInteractorOutputProtocol?
-        var APIDataManager: VIPERAPIDataManagerInputProtocol?
-        var localDatamanager: VIPERLocalDataManagerInputProtocol?
+        var presenter: ItemsListsInteractorOutputProtocol?
+        var APIDataManager: ItemsListsAPIDataManagerInputProtocol?
+        var localDatamanager: ItemsListsLocalDataManagerInputProtocol?
         
         func getOnlineTestData() {
             getOnlineTestDataCallback?()

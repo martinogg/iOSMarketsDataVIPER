@@ -1,6 +1,6 @@
 //
-//  VIPERInteractorTests.swift
-//  VIPERInteractorTests
+//  ItemsListsInteractorTests.swift
+//  ItemsListsInteractorTests
 //
 //  Created by martin ogg on 12/01/2018.
 //  Copyright © 2018 martinogg. All rights reserved.
@@ -18,11 +18,11 @@ extension DataItem: Equatable {
     }
 }
 
-class VIPERInteractorTests: XCTestCase {
+class ItemsListsInteractorTests: XCTestCase {
     
-    let interactorToTest = VIPERInteractor.init()
+    let interactorToTest = ItemsListsInteractor.init()
     
-    class MockPresenter: VIPERInteractorOutputProtocol {
+    class MockPresenter: ItemsListsInteractorOutputProtocol {
         var onDataRecvCallback: (([DataItem]) -> ())?
         var onErrorRecvCallback: ((Error) -> ())?
         
@@ -35,7 +35,7 @@ class VIPERInteractorTests: XCTestCase {
         }
     }
     
-    class MockAPIDataManager: VIPERAPIDataManagerInputProtocol {
+    class MockAPIDataManager: ItemsListsAPIDataManagerInputProtocol {
         
         let successReturn = [DataItem.init(code: "aa11", name: "V1", value: 1),
                              DataItem.init(code: "aa22", name: "V2", value: 2),

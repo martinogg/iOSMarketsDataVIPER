@@ -6,9 +6,9 @@
 import Foundation
 import UIKit
 
-class VIPERView: UITableViewController, VIPERViewProtocol
+class ItemsListsView: UITableViewController, ItemsListsViewProtocol
 {
-    var presenter: VIPERPresenterProtocol?
+    var presenter: ItemsListsPresenterProtocol?
     var dataItems: [DataItem]?
     var alertController: UIAlertController?
     
@@ -19,7 +19,7 @@ class VIPERView: UITableViewController, VIPERViewProtocol
         self.tableView.refreshControl?.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
     }
     
-    //MARK - VIPERViewProtocol
+    //MARK - ItemsListsViewProtocol
     func showData(_ data: [DataItem]) {
         dataItems = data
         self.tableView.refreshControl?.endRefreshing()
@@ -41,7 +41,7 @@ class VIPERView: UITableViewController, VIPERViewProtocol
 }
 
 //MARK - UITableViewDataSource
-extension VIPERView {
+extension ItemsListsView {
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let dataItems = dataItems {
             return dataItems.count

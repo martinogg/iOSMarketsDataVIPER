@@ -6,22 +6,22 @@
 import Foundation
 import UIKit
 
-class VIPERWireFrame: VIPERWireFrameProtocol
+class ItemsListsWireFrame: ItemsListsWireFrameProtocol
 {
-    static func createVIPERModule() -> UIViewController
+    static func createItemsListsModule() -> UIViewController
     {
         // Generating module components
-        let navController = mainStoryboard.instantiateViewController(withIdentifier: "VIPERNavigationController")
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "ItemsListsNavigationController")
         
-        guard let view = navController.childViewControllers.first as? VIPERViewProtocol else {
+        guard let view = navController.childViewControllers.first as? ItemsListsViewProtocol else {
             fatalError()
         }
         
-        let presenter: VIPERPresenterProtocol & VIPERInteractorOutputProtocol = VIPERPresenter()
-        let interactor: VIPERInteractorInputProtocol = VIPERInteractor()
-        let APIDataManager: VIPERAPIDataManagerInputProtocol = VIPERAPIDataManager()
-        let localDataManager: VIPERLocalDataManagerInputProtocol = VIPERLocalDataManager()
-        let wireFrame: VIPERWireFrameProtocol = VIPERWireFrame()
+        let presenter: ItemsListsPresenterProtocol & ItemsListsInteractorOutputProtocol = ItemsListsPresenter()
+        let interactor: ItemsListsInteractorInputProtocol = ItemsListsInteractor()
+        let APIDataManager: ItemsListsAPIDataManagerInputProtocol = ItemsListsAPIDataManager()
+        let localDataManager: ItemsListsLocalDataManagerInputProtocol = ItemsListsLocalDataManager()
+        let wireFrame: ItemsListsWireFrameProtocol = ItemsListsWireFrame()
         let alertController = UIAlertController.init()
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         

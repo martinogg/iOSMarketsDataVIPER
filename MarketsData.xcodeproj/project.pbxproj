@@ -12,10 +12,10 @@
 		9E20A4536CDF736196318943 /* Pods_MarketsDataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF59E27469ED130BAA2EF97E /* Pods_MarketsDataTests.framework */; };
 		EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F452007E44F002D75F9 /* DataCellView.swift */; };
 		EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F472007E752002D75F9 /* DataCellViewTests.swift */; };
-		EE318F4A2008DF6B002D75F9 /* VIPERPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */; };
-		EE318F4C2008E02E002D75F9 /* VIPERViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */; };
-		EE318F4E2008F710002D75F9 /* VIPERInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */; };
-		EE318F50200D0014002D75F9 /* VIPERAPIDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */; };
+		EE318F4A2008DF6B002D75F9 /* ItemsListsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F492008DF6B002D75F9 /* ItemsListsPresenterTests.swift */; };
+		EE318F4C2008E02E002D75F9 /* ItemsListsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4B2008E02E002D75F9 /* ItemsListsViewTests.swift */; };
+		EE318F4E2008F710002D75F9 /* ItemsListsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4D2008F710002D75F9 /* ItemsListsInteractorTests.swift */; };
+		EE318F50200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F4F200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift */; };
 		EE318F53200D4357002D75F9 /* testdata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F51200D4357002D75F9 /* testdata.json */; };
 		EE318F55200D5503002D75F9 /* testfaildata.json in Resources */ = {isa = PBXBuildFile; fileRef = EE318F54200D5503002D75F9 /* testfaildata.json */; };
 		EE318F59200FB634002D75F9 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE318F58200FB634002D75F9 /* DataItem.swift */; };
@@ -28,14 +28,14 @@
 		EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B7C20078BE6003CE405 /* MarketsDataTests.swift */; };
 		EE712B8820078BE6003CE405 /* MarketsDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B8720078BE6003CE405 /* MarketsDataUITests.swift */; };
 		EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */; };
-		EE712BB22007AC40003CE405 /* VIPERLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */; };
-		EE712BB32007AC40003CE405 /* VIPERAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */; };
-		EE712BB42007AC40003CE405 /* VIPERPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA82007AC40003CE405 /* VIPERPresenter.swift */; };
-		EE712BB52007AC40003CE405 /* VIPERWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */; };
-		EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAC2007AC40003CE405 /* VIPERView.swift */; };
-		EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */; };
-		EE712BB82007AC40003CE405 /* VIPERItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB02007AC40003CE405 /* VIPERItem.swift */; };
-		EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB12007AC40003CE405 /* VIPERInteractor.swift */; };
+		EE712BB22007AC40003CE405 /* ItemsListsLocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA42007AC40003CE405 /* ItemsListsLocalDataManager.swift */; };
+		EE712BB32007AC40003CE405 /* ItemsListsAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA62007AC40003CE405 /* ItemsListsAPIDataManager.swift */; };
+		EE712BB42007AC40003CE405 /* ItemsListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BA82007AC40003CE405 /* ItemsListsPresenter.swift */; };
+		EE712BB52007AC40003CE405 /* ItemsListsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAA2007AC40003CE405 /* ItemsListsWireFrame.swift */; };
+		EE712BB62007AC40003CE405 /* ItemsListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAC2007AC40003CE405 /* ItemsListsView.swift */; };
+		EE712BB72007AC40003CE405 /* ItemsListsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BAE2007AC40003CE405 /* ItemsListsProtocols.swift */; };
+		EE712BB82007AC40003CE405 /* ItemsListsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB02007AC40003CE405 /* ItemsListsItem.swift */; };
+		EE712BB92007AC40003CE405 /* ItemsListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB12007AC40003CE405 /* ItemsListsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +65,10 @@
 		B497BF7768E20DD0508826BA /* Pods-MarketsData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketsData.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketsData/Pods-MarketsData.release.xcconfig"; sourceTree = "<group>"; };
 		EE318F452007E44F002D75F9 /* DataCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellView.swift; sourceTree = "<group>"; };
 		EE318F472007E752002D75F9 /* DataCellViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCellViewTests.swift; sourceTree = "<group>"; };
-		EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERPresenterTests.swift; sourceTree = "<group>"; };
-		EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERViewTests.swift; sourceTree = "<group>"; };
-		EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERInteractorTests.swift; sourceTree = "<group>"; };
-		EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERAPIDataManagerTests.swift; sourceTree = "<group>"; };
+		EE318F492008DF6B002D75F9 /* ItemsListsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListsPresenterTests.swift; sourceTree = "<group>"; };
+		EE318F4B2008E02E002D75F9 /* ItemsListsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListsViewTests.swift; sourceTree = "<group>"; };
+		EE318F4D2008F710002D75F9 /* ItemsListsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListsInteractorTests.swift; sourceTree = "<group>"; };
+		EE318F4F200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListsAPIDataManagerTests.swift; sourceTree = "<group>"; };
 		EE318F51200D4357002D75F9 /* testdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testdata.json; sourceTree = "<group>"; };
 		EE318F54200D5503002D75F9 /* testfaildata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfaildata.json; sourceTree = "<group>"; };
 		EE318F58200FB634002D75F9 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
@@ -87,14 +87,14 @@
 		EE712B8720078BE6003CE405 /* MarketsDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsDataUITests.swift; sourceTree = "<group>"; };
 		EE712B8920078BE6003CE405 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListProtocolTests.swift; sourceTree = "<group>"; };
-		EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERLocalDataManager.swift; sourceTree = "<group>"; };
-		EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERAPIDataManager.swift; sourceTree = "<group>"; };
-		EE712BA82007AC40003CE405 /* VIPERPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERPresenter.swift; sourceTree = "<group>"; };
-		EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERWireFrame.swift; sourceTree = "<group>"; };
-		EE712BAC2007AC40003CE405 /* VIPERView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERView.swift; sourceTree = "<group>"; };
-		EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
-		EE712BB02007AC40003CE405 /* VIPERItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERItem.swift; sourceTree = "<group>"; };
-		EE712BB12007AC40003CE405 /* VIPERInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIPERInteractor.swift; sourceTree = "<group>"; };
+		EE712BA42007AC40003CE405 /* ItemsListsLocalDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsLocalDataManager.swift; sourceTree = "<group>"; };
+		EE712BA62007AC40003CE405 /* ItemsListsAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsAPIDataManager.swift; sourceTree = "<group>"; };
+		EE712BA82007AC40003CE405 /* ItemsListsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsPresenter.swift; sourceTree = "<group>"; };
+		EE712BAA2007AC40003CE405 /* ItemsListsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsWireFrame.swift; sourceTree = "<group>"; };
+		EE712BAC2007AC40003CE405 /* ItemsListsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsView.swift; sourceTree = "<group>"; };
+		EE712BAE2007AC40003CE405 /* ItemsListsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsProtocols.swift; sourceTree = "<group>"; };
+		EE712BB02007AC40003CE405 /* ItemsListsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsItem.swift; sourceTree = "<group>"; };
+		EE712BB12007AC40003CE405 /* ItemsListsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsInteractor.swift; sourceTree = "<group>"; };
 		F23EAC9FBBEDD14991D8B071 /* Pods-MarketsDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketsDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketsDataUITests/Pods-MarketsDataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F8BD0403A2CC05FEA6DC7952 /* Pods_MarketsDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketsDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,6 +158,13 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		EE318F5A20160D4A002D75F9 /* SpecificItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpecificItem;
+			sourceTree = "<group>";
+		};
 		EE712B5820078BE5003CE405 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +190,7 @@
 		EE712B6320078BE6003CE405 /* MarketsData */ = {
 			isa = PBXGroup;
 			children = (
+				EE318F5A20160D4A002D75F9 /* SpecificItem */,
 				EE712BA12007AC40003CE405 /* ItemsList */,
 				EE712B6420078BE6003CE405 /* AppDelegate.swift */,
 				EE712B6620078BE6003CE405 /* ViewController.swift */,
@@ -204,10 +212,10 @@
 				EE712B7E20078BE6003CE405 /* Info.plist */,
 				EE712B9C2007AADB003CE405 /* ItemsListProtocolTests.swift */,
 				EE318F472007E752002D75F9 /* DataCellViewTests.swift */,
-				EE318F492008DF6B002D75F9 /* VIPERPresenterTests.swift */,
-				EE318F4B2008E02E002D75F9 /* VIPERViewTests.swift */,
-				EE318F4D2008F710002D75F9 /* VIPERInteractorTests.swift */,
-				EE318F4F200D0014002D75F9 /* VIPERAPIDataManagerTests.swift */,
+				EE318F492008DF6B002D75F9 /* ItemsListsPresenterTests.swift */,
+				EE318F4B2008E02E002D75F9 /* ItemsListsViewTests.swift */,
+				EE318F4D2008F710002D75F9 /* ItemsListsInteractorTests.swift */,
+				EE318F4F200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift */,
 			);
 			path = MarketsDataTests;
 			sourceTree = "<group>";
@@ -247,7 +255,7 @@
 		EE712BA32007AC40003CE405 /* Local */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BA42007AC40003CE405 /* VIPERLocalDataManager.swift */,
+				EE712BA42007AC40003CE405 /* ItemsListsLocalDataManager.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -255,7 +263,7 @@
 		EE712BA52007AC40003CE405 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BA62007AC40003CE405 /* VIPERAPIDataManager.swift */,
+				EE712BA62007AC40003CE405 /* ItemsListsAPIDataManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -263,7 +271,7 @@
 		EE712BA72007AC40003CE405 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BA82007AC40003CE405 /* VIPERPresenter.swift */,
+				EE712BA82007AC40003CE405 /* ItemsListsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -271,7 +279,7 @@
 		EE712BA92007AC40003CE405 /* WireFrame */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BAA2007AC40003CE405 /* VIPERWireFrame.swift */,
+				EE712BAA2007AC40003CE405 /* ItemsListsWireFrame.swift */,
 			);
 			path = WireFrame;
 			sourceTree = "<group>";
@@ -279,7 +287,7 @@
 		EE712BAB2007AC40003CE405 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BAC2007AC40003CE405 /* VIPERView.swift */,
+				EE712BAC2007AC40003CE405 /* ItemsListsView.swift */,
 				EE318F452007E44F002D75F9 /* DataCellView.swift */,
 			);
 			path = View;
@@ -288,7 +296,7 @@
 		EE712BAD2007AC40003CE405 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BAE2007AC40003CE405 /* VIPERProtocols.swift */,
+				EE712BAE2007AC40003CE405 /* ItemsListsProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -296,8 +304,8 @@
 		EE712BAF2007AC40003CE405 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				EE712BB02007AC40003CE405 /* VIPERItem.swift */,
-				EE712BB12007AC40003CE405 /* VIPERInteractor.swift */,
+				EE712BB02007AC40003CE405 /* ItemsListsItem.swift */,
+				EE712BB12007AC40003CE405 /* ItemsListsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -603,19 +611,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE712BB32007AC40003CE405 /* VIPERAPIDataManager.swift in Sources */,
-				EE712BB42007AC40003CE405 /* VIPERPresenter.swift in Sources */,
-				EE712BB22007AC40003CE405 /* VIPERLocalDataManager.swift in Sources */,
-				EE712BB62007AC40003CE405 /* VIPERView.swift in Sources */,
+				EE712BB32007AC40003CE405 /* ItemsListsAPIDataManager.swift in Sources */,
+				EE712BB42007AC40003CE405 /* ItemsListsPresenter.swift in Sources */,
+				EE712BB22007AC40003CE405 /* ItemsListsLocalDataManager.swift in Sources */,
+				EE712BB62007AC40003CE405 /* ItemsListsView.swift in Sources */,
 				EE318F59200FB634002D75F9 /* DataItem.swift in Sources */,
-				EE712BB92007AC40003CE405 /* VIPERInteractor.swift in Sources */,
-				EE712BB72007AC40003CE405 /* VIPERProtocols.swift in Sources */,
+				EE712BB92007AC40003CE405 /* ItemsListsInteractor.swift in Sources */,
+				EE712BB72007AC40003CE405 /* ItemsListsProtocols.swift in Sources */,
 				EE318F462007E44F002D75F9 /* DataCellView.swift in Sources */,
 				EE712B6720078BE6003CE405 /* ViewController.swift in Sources */,
 				EE712B6520078BE6003CE405 /* AppDelegate.swift in Sources */,
-				EE712BB82007AC40003CE405 /* VIPERItem.swift in Sources */,
+				EE712BB82007AC40003CE405 /* ItemsListsItem.swift in Sources */,
 				EE712B6D20078BE6003CE405 /* MarketsData.xcdatamodeld in Sources */,
-				EE712BB52007AC40003CE405 /* VIPERWireFrame.swift in Sources */,
+				EE712BB52007AC40003CE405 /* ItemsListsWireFrame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,10 +632,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE712B9D2007AADB003CE405 /* ItemsListProtocolTests.swift in Sources */,
-				EE318F4E2008F710002D75F9 /* VIPERInteractorTests.swift in Sources */,
-				EE318F4C2008E02E002D75F9 /* VIPERViewTests.swift in Sources */,
-				EE318F50200D0014002D75F9 /* VIPERAPIDataManagerTests.swift in Sources */,
-				EE318F4A2008DF6B002D75F9 /* VIPERPresenterTests.swift in Sources */,
+				EE318F4E2008F710002D75F9 /* ItemsListsInteractorTests.swift in Sources */,
+				EE318F4C2008E02E002D75F9 /* ItemsListsViewTests.swift in Sources */,
+				EE318F50200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift in Sources */,
+				EE318F4A2008DF6B002D75F9 /* ItemsListsPresenterTests.swift in Sources */,
 				EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */,
 				EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */,
 			);

@@ -5,11 +5,11 @@
 
 import Foundation
 
-class VIPERPresenter: VIPERPresenterProtocol
+class ItemsListsPresenter: ItemsListsPresenterProtocol
 {
-    weak var view: VIPERViewProtocol?
-    var interactor: VIPERInteractorInputProtocol?
-    var wireFrame: VIPERWireFrameProtocol?
+    weak var view: ItemsListsViewProtocol?
+    var interactor: ItemsListsInteractorInputProtocol?
+    var wireFrame: ItemsListsWireFrameProtocol?
     
     init() {}
     
@@ -22,7 +22,7 @@ class VIPERPresenter: VIPERPresenterProtocol
     }
 }
 
-extension VIPERPresenter: VIPERInteractorOutputProtocol {
+extension ItemsListsPresenter: ItemsListsInteractorOutputProtocol {
     func dataRecv(data: [DataItem]) {
         view?.showData(data)
     }
