@@ -68,5 +68,36 @@ class ItemsListsPresenterTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
     
+    
+    class MockWireframe: ItemsListsWireFrameProtocol {
+        static func createItemsListsModule() -> UIViewController {
+            return UIViewController()
+        }
+        
+        var presentedFromView: ItemsListsViewProtocol?
+        var presentedDataItem: DataItem?
+        
+        func presentSpecificItemScreen(from view: ItemsListsViewProtocol, forItem item: DataItem) {
+            presentedFromView = view
+            presentedDataItem = item
+        }
+        
+        
+    }
+    
+    func testShowSpecificItem() {
+        let mockFromView = ItemsListsView()
+        let mockDataItem = DataItem(code: "code1", name: "name1", value: 111)
+        let mockWireframe = MockWireframe()
+        
+        presenterToTest.view = mockFromView
+        presenterToTest.wireFrame = mockWireframe
+        
+        presenterToTest.showSpecificItem(forItem: mockDataItem)
+        
+        XCTAssert(mockWireframe.presentedDataItem?.name == mockDataItem.name)
+        XCTAssert(mockFromView === mockWireframe.presentedFromView)
+    }
+    
 }
 

@@ -38,6 +38,16 @@ class ItemsListsWireFrame: ItemsListsWireFrameProtocol
         return view as! UIViewController
     }
     
+    func presentSpecificItemScreen(from view: ItemsListsViewProtocol, forItem item: DataItem) {
+        
+        let specificItemViewController = SpecificItemWireFrame.createSpecificItemModule(forItem: item)
+         
+         if let sourceView = view as? UIViewController {
+         sourceView.navigationController?.pushViewController(specificItemViewController, animated: true)
+         }
+
+    }
+    
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }

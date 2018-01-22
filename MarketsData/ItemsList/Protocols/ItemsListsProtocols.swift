@@ -23,6 +23,7 @@ protocol ItemsListsWireFrameProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
+    func presentSpecificItemScreen(from view: ItemsListsViewProtocol, forItem item: DataItem)
 }
 
 protocol ItemsListsPresenterProtocol: class
@@ -44,6 +45,7 @@ protocol ItemsListsInteractorOutputProtocol: class
     */
     func dataRecv(data: [DataItem])
     func dataError(error: Error)
+    func showSpecificItem(forItem item: DataItem)
 }
 
 protocol ItemsListsInteractorInputProtocol: class

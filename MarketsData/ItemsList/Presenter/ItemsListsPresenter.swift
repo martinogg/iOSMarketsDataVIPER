@@ -30,4 +30,10 @@ extension ItemsListsPresenter: ItemsListsInteractorOutputProtocol {
     func dataError(error: Error) {
         view?.showError("An Error Occurred")
     }
+    
+    func showSpecificItem(forItem item: DataItem) {
+        if let view = view {
+        wireFrame?.presentSpecificItemScreen(from: view, forItem: item)
+        }
+    }
 }

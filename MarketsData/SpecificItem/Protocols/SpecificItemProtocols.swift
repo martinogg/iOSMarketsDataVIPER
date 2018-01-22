@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SpecificItemViewProtocol: class
 {
@@ -19,6 +20,7 @@ protocol SpecificItemWireFrameProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */
+    static func createSpecificItemModule(forItem item: DataItem) -> UIViewController
 }
 
 protocol SpecificItemPresenterProtocol: class

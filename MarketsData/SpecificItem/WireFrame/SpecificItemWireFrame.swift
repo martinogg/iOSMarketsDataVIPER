@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 class SpecificItemWireFrame: SpecificItemWireFrameProtocol
 {
@@ -26,4 +27,9 @@ class SpecificItemWireFrame: SpecificItemWireFrameProtocol
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
     }
+    
+    static func createSpecificItemModule(forItem item: DataItem) -> UIViewController {
+        return SpecificItemView() as UIViewController //TODO
+    }
+    
 }

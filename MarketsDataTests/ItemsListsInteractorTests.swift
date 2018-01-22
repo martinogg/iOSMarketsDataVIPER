@@ -23,6 +23,10 @@ class ItemsListsInteractorTests: XCTestCase {
     let interactorToTest = ItemsListsInteractor.init()
     
     class MockPresenter: ItemsListsInteractorOutputProtocol {
+        func showSpecificItem(forItem item: DataItem) {
+            
+        }
+        
         var onDataRecvCallback: (([DataItem]) -> ())?
         var onErrorRecvCallback: ((Error) -> ())?
         
