@@ -36,6 +36,7 @@ protocol ItemsListsPresenterProtocol: class
     */
     func viewDidLoad()
     func refreshData()
+    func showSpecificItem(forItem item: DataItem)
 }
 
 protocol ItemsListsInteractorOutputProtocol: class
@@ -45,7 +46,6 @@ protocol ItemsListsInteractorOutputProtocol: class
     */
     func dataRecv(data: [DataItem])
     func dataError(error: Error)
-    func showSpecificItem(forItem item: DataItem)
 }
 
 protocol ItemsListsInteractorInputProtocol: class

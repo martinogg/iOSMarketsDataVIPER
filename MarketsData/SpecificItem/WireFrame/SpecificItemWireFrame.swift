@@ -8,8 +8,8 @@ import UIKit
 
 class SpecificItemWireFrame: SpecificItemWireFrameProtocol
 {
-    class func presentSpecificItemModule(fromView view: AnyObject)
-    {
+    static func createSpecificItemModule(forItem item: DataItem) -> UIViewController {
+        
         // Generating module components
         let view = SpecificItemView()
         let presenter: SpecificItemPresenterProtocol& SpecificItemInteractorOutputProtocol = SpecificItemPresenter()
@@ -26,10 +26,8 @@ class SpecificItemWireFrame: SpecificItemWireFrameProtocol
         interactor.presenter = presenter
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
-    }
-    
-    static func createSpecificItemModule(forItem item: DataItem) -> UIViewController {
-        return SpecificItemView() as UIViewController //TODO
+        
+        return view as UIViewController
     }
     
 }

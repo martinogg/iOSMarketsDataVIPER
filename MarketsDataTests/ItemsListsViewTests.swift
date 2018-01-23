@@ -26,6 +26,11 @@ class ItemsListsViewTests: XCTestCase {
     let viewToTest = ItemsListsViewForTest.init(style: .plain)
     
     class MockItemsListsPresenter: ItemsListsPresenterProtocol {
+        var showSpecificItemCallback: ((_ item: DataItem) -> ())? = nil
+        
+        func showSpecificItem(forItem item: DataItem) {
+            showSpecificItemCallback?(item)
+        }
         
         weak var view: ItemsListsViewProtocol?
         var interactor: ItemsListsInteractorInputProtocol?
@@ -76,18 +81,15 @@ class ItemsListsViewTests: XCTestCase {
     
     func testShowData() {
         let mockData = [DataItem.init(code: "aa11", name: "V1", value: 1),
-                             DataItem.init(code: "aa22", name: "V2", value: 2),
-                             DataItem.init(code: "aa33", name: "V3", value: 3)]
+                        DataItem.init(code: "aa22", name: "V2", value: 2),
+                        DataItem.init(code: "aa33", name: "V3", value: 3)]
         let mockTableView = MockUITableView.init()
         
         viewToTest.tableView = mockTableView
         viewToTest.showData(mockData)
         
-      
-        guard let dataItemsToTest = viewToTest.dataItems else {
-            XCTFail()
-            fatalError()
-        }
+        
+        let dataItemsToTest = viewToTest.dataItems
         
         XCTAssert(mockData == dataItemsToTest)
         XCTAssert(mockTableView.reloadDataCalled == true)
@@ -95,7 +97,7 @@ class ItemsListsViewTests: XCTestCase {
         XCTAssert(viewToTest.tableView(UITableView.init(), numberOfRowsInSection: 0) == 3)
         
         let moreMockData = [DataItem.init(code: "aa3", name: "V3", value: 3),
-                        DataItem.init(code: "aa44", name: "V4", value: 4)]
+                            DataItem.init(code: "aa44", name: "V4", value: 4)]
         
         viewToTest.showData(moreMockData)
         
@@ -105,7 +107,7 @@ class ItemsListsViewTests: XCTestCase {
         let mockLabel = UILabel.init()
         mockDataCellView.label1 = mockLabel
         mockTableView.cellToReturn = mockDataCellView
-
+        
         guard let cellToTest0 =
             viewToTest.tableView(mockTableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? DataCellView else {
                 XCTFail()
@@ -137,5 +139,33 @@ class ItemsListsViewTests: XCTestCase {
         XCTAssert(testAlertController.title == "Error")
     }
     
+    func testDidSelectRow() {
+        let mockPresenter = MockItemsListsPresenter()
+        let shownItemExpectation0 = expectation(description: "data0 item shown")
+        let shownItemExpectation1 = expectation(description: "data1 item shown")
+        
+        let data0 = DataItem(code: "0", name: "0", value: 0)
+        let data1 = DataItem(code: "1", name: "1", value: 1)
+        
+        viewToTest.dataItems = [data0, data1]
+        viewToTest.presenter = mockPresenter
+        
+        // Select position 0
+        mockPresenter.showSpecificItemCallback = { item in
+            XCTAssert(item == data0)
+            shownItemExpectation0.fulfill()
+        }
+        
+        viewToTest.tableView(UITableView(), didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        // Select position 1
+        mockPresenter.showSpecificItemCallback = { item in
+            XCTAssert(item == data1)
+            shownItemExpectation1.fulfill()
+        }
+        viewToTest.tableView(UITableView(), didSelectRowAt: IndexPath(row: 1, section: 0))
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
 }
 

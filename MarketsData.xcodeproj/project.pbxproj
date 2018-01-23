@@ -45,6 +45,7 @@
 		EE712BB82007AC40003CE405 /* ItemsListsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB02007AC40003CE405 /* ItemsListsItem.swift */; };
 		EE712BB92007AC40003CE405 /* ItemsListsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE712BB12007AC40003CE405 /* ItemsListsInteractor.swift */; };
 		EEEBA186201680BE00605794 /* ItemListsWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBA185201680BE00605794 /* ItemListsWireframeTests.swift */; };
+		EEEBA188201774C300605794 /* SpecificItemWireFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEBA187201774C300605794 /* SpecificItemWireFrameTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		EE712BB02007AC40003CE405 /* ItemsListsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsItem.swift; sourceTree = "<group>"; };
 		EE712BB12007AC40003CE405 /* ItemsListsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsListsInteractor.swift; sourceTree = "<group>"; };
 		EEEBA185201680BE00605794 /* ItemListsWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListsWireframeTests.swift; sourceTree = "<group>"; };
+		EEEBA187201774C300605794 /* SpecificItemWireFrameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificItemWireFrameTests.swift; sourceTree = "<group>"; };
 		F23EAC9FBBEDD14991D8B071 /* Pods-MarketsDataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarketsDataUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarketsDataUITests/Pods-MarketsDataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F8BD0403A2CC05FEA6DC7952 /* Pods_MarketsDataUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarketsDataUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -307,6 +309,7 @@
 				EE318F4D2008F710002D75F9 /* ItemsListsInteractorTests.swift */,
 				EE318F4F200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift */,
 				EEEBA185201680BE00605794 /* ItemListsWireframeTests.swift */,
+				EEEBA187201774C300605794 /* SpecificItemWireFrameTests.swift */,
 			);
 			path = MarketsDataTests;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				EEEBA186201680BE00605794 /* ItemListsWireframeTests.swift in Sources */,
 				EE318F50200D0014002D75F9 /* ItemsListsAPIDataManagerTests.swift in Sources */,
 				EE318F4A2008DF6B002D75F9 /* ItemsListsPresenterTests.swift in Sources */,
+				EEEBA188201774C300605794 /* SpecificItemWireFrameTests.swift in Sources */,
 				EE712B7D20078BE6003CE405 /* MarketsDataTests.swift in Sources */,
 				EE318F482007E752002D75F9 /* DataCellViewTests.swift in Sources */,
 			);

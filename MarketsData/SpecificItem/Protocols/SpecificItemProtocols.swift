@@ -16,7 +16,6 @@ protocol SpecificItemViewProtocol: class
 
 protocol SpecificItemWireFrameProtocol: class
 {
-    static func presentSpecificItemModule(fromView view: AnyObject)
     /**
     * Add here your methods for communication PRESENTER -> WIREFRAME
     */

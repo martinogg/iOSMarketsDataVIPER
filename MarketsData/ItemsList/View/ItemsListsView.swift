@@ -9,7 +9,7 @@ import UIKit
 class ItemsListsView: UITableViewController, ItemsListsViewProtocol
 {
     var presenter: ItemsListsPresenterProtocol?
-    var dataItems: [DataItem]?
+    var dataItems: [DataItem] = []
     var alertController: UIAlertController?
     
     override func viewDidLoad() {
@@ -43,19 +43,18 @@ class ItemsListsView: UITableViewController, ItemsListsViewProtocol
 //MARK - UITableViewDataSource
 extension ItemsListsView {
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let dataItems = dataItems {
             return dataItems.count
-        } else {
-            return 0
-        }
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell") as? DataCellView,
-            let dataItem = dataItems?[indexPath.row] else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "DataCell") as? DataCellView else {
                 fatalError()
         }
-        cell.configure(value: dataItem)
+        cell.configure(value: dataItems[indexPath.row])
         return cell
+    }
+    
+    override public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showSpecificItem(forItem: dataItems[indexPath.row])
     }
 }
