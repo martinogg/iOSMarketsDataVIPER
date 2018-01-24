@@ -22,7 +22,7 @@ class ItemListsWireframeTests: XCTestCase {
     }
     
     func testCreateItemsListsModule() {
-        guard let createdModuleToTest = ItemsListsWireFrame.createItemsListsModule() as? ItemsListsViewProtocol else {
+        guard let createdModuleToTest = ItemsListsWireFrame.createItemsListsModule().childViewControllers.first as? ItemsListsViewProtocol else {
             XCTFail()
             fatalError()
         }

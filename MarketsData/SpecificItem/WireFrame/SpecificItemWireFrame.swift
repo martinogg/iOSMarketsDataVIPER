@@ -11,23 +11,30 @@ class SpecificItemWireFrame: SpecificItemWireFrameProtocol
     static func createSpecificItemModule(forItem item: DataItem) -> UIViewController {
         
         // Generating module components
-        let view = SpecificItemView()
-        let presenter: SpecificItemPresenterProtocol& SpecificItemInteractorOutputProtocol = SpecificItemPresenter()
-        let interactor: SpecificItemInteractorInputProtocol = SpecificItemInteractor()
-        let APIDataManager: SpecificItemAPIDataManagerInputProtocol = SpecificItemAPIDataManager()
-        let localDataManager: SpecificItemLocalDataManagerInputProtocol = SpecificItemLocalDataManager()
-        let wireFrame: SpecificItemWireFrameProtocol = SpecificItemWireFrame()
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SpecificItemVC") // TODO - new VC in storyboard
         
-        // Connecting
-        view.presenter = presenter
-        presenter.view = view
-        presenter.wireFrame = wireFrame
-        presenter.interactor = interactor
-        interactor.presenter = presenter
-        interactor.APIDataManager = APIDataManager
-        interactor.localDatamanager = localDataManager
+        if let view = viewController as? SpecificItemView {
+            
+            let presenter: SpecificItemPresenterProtocol& SpecificItemInteractorOutputProtocol = SpecificItemPresenter()
+            let interactor: SpecificItemInteractorInputProtocol = SpecificItemInteractor()
+            let APIDataManager: SpecificItemAPIDataManagerInputProtocol = SpecificItemAPIDataManager()
+            let localDataManager: SpecificItemLocalDataManagerInputProtocol = SpecificItemLocalDataManager()
+            let wireFrame: SpecificItemWireFrameProtocol = SpecificItemWireFrame()
+            
+            // Connecting
+            view.presenter = presenter
+            presenter.view = view
+            presenter.wireFrame = wireFrame
+            presenter.interactor = interactor
+            interactor.presenter = presenter
+            interactor.APIDataManager = APIDataManager
+            interactor.localDatamanager = localDataManager
+        }
         
-        return view as UIViewController
+        return viewController as UIViewController
     }
     
+    static var mainStoryboard: UIStoryboard {
+        return UIStoryboard(name: "Main", bundle: Bundle.main)
+    }
 }

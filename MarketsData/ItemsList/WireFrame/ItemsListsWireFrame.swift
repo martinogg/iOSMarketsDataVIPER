@@ -35,17 +35,19 @@ class ItemsListsWireFrame: ItemsListsWireFrameProtocol
         interactor.APIDataManager = APIDataManager
         interactor.localDatamanager = localDataManager
         
-        return view as! UIViewController
+        return navController
     }
     
     func presentSpecificItemScreen(from view: ItemsListsViewProtocol, forItem item: DataItem) {
         
         let specificItemViewController = SpecificItemWireFrame.createSpecificItemModule(forItem: item)
-         
-         if let sourceView = view as? UIViewController {
-         sourceView.navigationController?.pushViewController(specificItemViewController, animated: true)
-         }
-
+        
+        if let sourceView = view as? UIViewController {
+            if (sourceView.navigationController != nil) {
+                sourceView.navigationController?.pushViewController(specificItemViewController, animated: true)
+            }
+        }
+        
     }
     
     static var mainStoryboard: UIStoryboard {
