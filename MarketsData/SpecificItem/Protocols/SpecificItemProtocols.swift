@@ -12,6 +12,7 @@ protocol SpecificItemViewProtocol: class
     /**
     * Add here your methods for communication PRESENTER -> VIEW
     */
+    func show(item: DataItem)
 }
 
 protocol SpecificItemWireFrameProtocol: class
@@ -30,6 +31,8 @@ protocol SpecificItemPresenterProtocol: class
     /**
     * Add here your methods for communication VIEW -> PRESENTER
     */
+    var item: DataItem? { get set }
+    func viewDidLoad()
 }
 
 protocol SpecificItemInteractorOutputProtocol: class

@@ -10,6 +10,12 @@ class SpecificItemPresenter: SpecificItemPresenterProtocol, SpecificItemInteract
     weak var view: SpecificItemViewProtocol?
     var interactor: SpecificItemInteractorInputProtocol?
     var wireFrame: SpecificItemWireFrameProtocol?
+    var item: DataItem?
     
-    init() {}
+    func viewDidLoad() {
+        guard let item = item else {
+            fatalError("item not set from wireframe")
+        }
+        view?.show(item: item)
+    }
 }

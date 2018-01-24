@@ -11,7 +11,7 @@ class SpecificItemWireFrame: SpecificItemWireFrameProtocol
     static func createSpecificItemModule(forItem item: DataItem) -> UIViewController {
         
         // Generating module components
-        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SpecificItemVC") // TODO - new VC in storyboard
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "SpecificItemVC")
         
         if let view = viewController as? SpecificItemView {
             
@@ -26,6 +26,7 @@ class SpecificItemWireFrame: SpecificItemWireFrameProtocol
             presenter.view = view
             presenter.wireFrame = wireFrame
             presenter.interactor = interactor
+            presenter.item = item
             interactor.presenter = presenter
             interactor.APIDataManager = APIDataManager
             interactor.localDatamanager = localDataManager

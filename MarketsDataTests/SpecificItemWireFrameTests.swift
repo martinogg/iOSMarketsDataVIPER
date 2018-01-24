@@ -34,6 +34,7 @@ class SpecificItemWireFrameTests: XCTestCase {
         XCTAssert(moduleToTest.presenter?.view === moduleToTest)
         XCTAssert(moduleToTest.presenter?.wireFrame is SpecificItemWireFrame)
         XCTAssert(moduleToTest.presenter?.interactor is SpecificItemInteractor)
+        XCTAssert(moduleToTest.presenter?.item != nil)
         XCTAssert(moduleToTest.presenter?.interactor?.presenter === moduleToTest.presenter)
         XCTAssert(moduleToTest.presenter?.interactor?.APIDataManager is SpecificItemAPIDataManager)
         XCTAssert(moduleToTest.presenter?.interactor?.localDatamanager is SpecificItemLocalDataManager)
